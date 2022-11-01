@@ -1,16 +1,16 @@
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
-    protected int average;
+    protected long average;
 
-    protected SalesManager(int[] sales) {
+    protected SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    protected int averageSales() {
-        int minNumber = sales[0];
-        int maxNumber = sales[0];
-        int sum = 0;
+    protected long averageSales() {
+        long minNumber = sales[0];
+        long maxNumber = sales[0];
+        long sum = 0;
         if (sales.length < 5) {
             System.out.println("Недостаточно данных!");
         }
@@ -26,9 +26,9 @@ public class SalesManager {
         return average = sum / (sales.length - 2);
     }
 
-    protected int max() {
-        int max = -1;
-        for (int sale : sales) {
+    protected long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
